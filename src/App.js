@@ -13,7 +13,6 @@ function App() {
             <Route path='/gallery' element={<GalleryPage />} />
             <Route path='/about' element={<AboutPage />} />
           </Routes>
-
       </BrowserRouter>
     </div>
   );

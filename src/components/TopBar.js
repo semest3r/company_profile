@@ -11,7 +11,7 @@ const TopBar = () => {
                 </div>
             </div>
             <div className='grow sm:basis-1/2'>
-                <ul className="flex flex-wrap gap-4 float-right mx-5 sm:mx-10">
+                <ul className="flex flex-wrap gap-4 float-right justify-center mx-5 sm:mx-10">
                     <li className='font-semibold text-sm sm:text-base text-center'><Link to="/" className='text-gray-200 hover:text-emerald-400 px-2 py-1 font-bold rounded-sm'>Beranda</Link></li>
                     <li className='font-semibold text-sm sm:text-base text-center'><Link to="/gallery" className='text-gray-200 hover:text-emerald-400 px-2 py-1 font-bold rounded-sm'>Our Gallery</Link></li>
                     <li className='font-semibold text-sm sm:text-base text-center'><Link to="/about" className='text-gray-200 hover:text-emerald-400 px-2 py-1 font-bold rounded-sm'>About Us</Link></li>

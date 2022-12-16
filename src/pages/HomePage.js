@@ -8,16 +8,13 @@ import SideBar from "../components/SideBar";
 const HomePage = () => {
 
     const bg_img = require('../image/bg_ship2.png')
-    const section1 = useRef(null)
-    const section2 = useRef(null)
-    const section3 = useRef(null)
 
     return (
         <div className="container min-w-full " >
             <TopBar />
-            <section ref={section1} className="h-screen w-full flex justify-center items-center bg-center shadow-xl shadow-gray-800" style={{backgroundImage: `url(${bg_img})`}} >
+            <section id="section1" className="h-screen w-full flex justify-center items-center bg-center shadow-xl shadow-gray-800" style={{backgroundImage: `url(${bg_img})`}} >
                 <div className="">
-                    <h1 className="text-6xl sm:text-8xl text-gray-200 font-mono text-center bg-gray-700/10">NUSANTARA ELITES</h1>
+                    <h1 className="text-6xl sm:text-8xl text-gray-100 font-mono text-center bg-gray-700/10">NUSANTARA ELITES</h1>
                     <h1 className="text-xl text-slate-300 font-mono text-center border-b-2 border-emerald-400">A Legend will start his journey from here</h1>
                     <ul className="flex gap-2 justify-center mt-5">
                         <li className="p-2">
@@ -30,21 +27,52 @@ const HomePage = () => {
                 </div>
             </section>
             <SideBar />
-            <section ref={section2} className="section2 bg-slate-200 border-t-8 border-gray-700/75 border-collapse">
-                <div className="flex flex-wrap justify-center items-center">
-                    <h1 className="basis-full text-center font-mono font-semibold text-4xl p-5">NKRI Elite Gallery</h1>
-                    <div className="flex flex-wrap gap-4">
-                    <div className='w-60 h-60'>
-                        <img src={require('../image/default.jpg')} className="w-60 h-60"/>
+            <section id="section2" className="section2 bg-slate-200 border-t-8 border-collapse">
+                <div className="flex justify-center pt-5">
+                    <div className="w-[70%] bg-gray-600">
+                    <h1 className="w-full text-center text-gray-200 mt-10 p-5 font-mono font-semibold text-4xl">The Founding Fathers of NKRI Elites</h1>
+                        <div className="mt-12 text-center border-b-4">
+                            <ul className="">
+                                <li className="inline-block px-5">
+                                <img src={require('../image/default.jpg')} className="w-52 h-52 rounded-full"/>
+                                <span className="block font-mono font-semibold p-2">Vid Vladimir</span>
+                                <span className="block font-mono text-gray-800  ">President Corp</span>
+                                </li>
+                                <li className="inline-block px-5">
+                                <img src={require('../image/default.jpg')} className="w-52 h-52 rounded-full"/>
+                                <span className="block font-mono font-semibold p-2">Rodgan</span>
+                                <span className="block font-mono text-gray-800  ">Vice President</span>
+                                </li>
+                                <li className="inline-block px-5">
+                                <img src={require('../image/default.jpg')} className="w-52 h-52 rounded-full"/>
+                                <span className="block font-mono font-semibold p-2">Dr Lupus Rex</span>
+                                <span className="block font-mono text-gray-800  ">Jendral</span>
+                                </li>
+                            </ul>
+                            <div className="border-b-4 border-emerald-400 mt-10 w-1/2 mx-auto"></div>
+                        </div>
                     </div>
-                    <div className='w-60 h-60'>
-                        <img src={require('../image/default.jpg')} className="w-60 h-60"/>
+                </div>
+            </section>
+            <section id="section3" className="section2 bg-slate-200 border-t-8 border-collapse w-full">
+                <div className="flex justify-center items-center flex-wrap">
+                    <h1 className="w-full text-center font-mono font-semibold text-4xl p-5">NKRI Elite Gallery</h1>
+                    <div className="">
+                        <ul>
+                            <li className="inline-block">
+                            <img src={require('../image/default.jpg')} className="w-60 h-60"/>
+                            </li>
+                            <li className="inline-block">
+                            <img src={require('../image/default.jpg')} className="w-60 h-60"/>
+                            </li>
+                            <li className="inline-block">
+                            <img src={require('../image/default.jpg')} className="w-60 h-60"/>
+                            </li>
+                        </ul>
                     </div>
-                    <div className='w-60 h-60'>
-                        <img src={require('../image/default.jpg')} className="w-60 h-60"/>
-                    </div>
-                    </div>
-                    <Link className="basis-full text-center font-semibold m-4 hover:text-emerald-400"><span>More In Our Gallery</span></Link>
+                </div>
+                <div className="text-center p-5">
+                <Link className="font-semibold m-4 hover:text-emerald-400">More In Our Gallery</Link>
                 </div>
             </section>
             <Footer />
